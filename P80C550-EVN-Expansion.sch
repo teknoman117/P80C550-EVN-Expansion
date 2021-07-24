@@ -1,0 +1,480 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A2 23386 16535
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x13 J3
+U 1 1 679716AD
+P 10900 7550
+F 0 "J3" H 10980 7592 50  0000 L CNN
+F 1 "Address Low" H 10980 7501 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x13_P2.54mm_Vertical" H 10900 7550 50  0001 C CNN
+F 3 "~" H 10900 7550 50  0001 C CNN
+F 4 "S7046-ND" H 10900 7550 50  0001 C CNN "Digikey_PN"
+F 5 "https://www.digikey.com/en/products/detail/PPPC131LFBN-RC/S7046-ND/810185" H 10900 7550 50  0001 C CNN "Digikey_Page"
+F 6 "PPPC131LFBN-RC" H 10900 7550 50  0001 C CNN "Manufacturer_PN"
+	1    10900 7550
+	1    0    0    -1  
+$EndComp
+Text GLabel 10350 8050 0    50   Input ~ 0
+~CODE_CS
+Wire Wire Line
+	8150 7650 7850 7650
+Wire Wire Line
+	7850 7550 8150 7550
+Wire Wire Line
+	8150 7450 7850 7450
+Text GLabel 7850 7350 0    50   Input ~ 0
+SCC1_IEO
+Wire Wire Line
+	7850 7350 8150 7350
+Text GLabel 8650 7350 2    50   Input ~ 0
+CLK
+Text GLabel 8650 7450 2    50   Input ~ 0
+T1
+Text GLabel 7850 7450 0    50   Input ~ 0
+T0
+Text GLabel 7850 7650 0    50   Input ~ 0
+TxD
+Text GLabel 8650 7650 2    50   Input ~ 0
+RxD
+Text GLabel 7850 7550 0    50   Input ~ 0
+~INT1
+Text GLabel 8650 7550 2    50   Input ~ 0
+~INT0
+$Comp
+L power:+5V #PWR0149
+U 1 1 61B95BD0
+P 8050 7250
+F 0 "#PWR0149" H 8050 7100 50  0001 C CNN
+F 1 "+5V" H 8065 7423 50  0000 C CNN
+F 2 "" H 8050 7250 50  0001 C CNN
+F 3 "" H 8050 7250 50  0001 C CNN
+	1    8050 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0148
+U 1 1 61AF21EF
+P 8650 7750
+F 0 "#PWR0148" H 8650 7500 50  0001 C CNN
+F 1 "GND" H 8655 7577 50  0000 C CNN
+F 2 "" H 8650 7750 50  0001 C CNN
+F 3 "" H 8650 7750 50  0001 C CNN
+	1    8650 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J2
+U 1 1 61AEE140
+P 8350 7550
+F 0 "J2" H 8400 7967 50  0000 C CNN
+F 1 "Signals" H 8400 7876 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 8350 7550 50  0001 C CNN
+F 3 "~" H 8350 7550 50  0001 C CNN
+F 4 "S7108-ND" H 8350 7550 50  0001 C CNN "Digikey_PN"
+F 5 "https://www.digikey.com/en/products/detail/PPPC052LFBN-RC/S7108-ND/810245" H 8350 7550 50  0001 C CNN "Digikey_Page"
+F 6 "PPPC052LFBN-RC" H 8350 7550 50  0001 C CNN "Manufacturer_PN"
+	1    8350 7550
+	1    0    0    -1  
+$EndComp
+Text GLabel 10350 7950 0    50   Input ~ 0
+~CODE_RD
+Text GLabel 10350 8150 0    50   Input ~ 0
+~RST
+Wire Bus Line
+	12500 7600 12550 7600
+$Comp
+L power:+5V #PWR0137
+U 1 1 608E1948
+P 12800 6850
+F 0 "#PWR0137" H 12800 6700 50  0001 C CNN
+F 1 "+5V" H 12815 7023 50  0000 C CNN
+F 2 "" H 12800 6850 50  0001 C CNN
+F 3 "" H 12800 6850 50  0001 C CNN
+	1    12800 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0136
+U 1 1 608E1942
+P 12850 8050
+F 0 "#PWR0136" H 12850 7800 50  0001 C CNN
+F 1 "GND" H 12855 7877 50  0000 C CNN
+F 2 "" H 12850 8050 50  0001 C CNN
+F 3 "" H 12850 8050 50  0001 C CNN
+	1    12850 8050
+	1    0    0    -1  
+$EndComp
+Text GLabel 12500 7600 0    50   Input ~ 0
+A[15:0]
+Wire Wire Line
+	12650 7850 12850 7850
+Text GLabel 12650 7750 0    50   Input ~ 0
+~WR
+$Comp
+L Connector_Generic:Conn_01x12 J4
+U 1 1 607FFB51
+P 13050 7450
+F 0 "J4" H 13130 7442 50  0000 L CNN
+F 1 "Address High" H 13130 7351 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical" H 13050 7450 50  0001 C CNN
+F 3 "~" H 13050 7450 50  0001 C CNN
+F 4 "S7046-ND" H 13050 7450 50  0001 C CNN "Digikey_PN"
+F 5 "https://www.digikey.com/en/products/detail/PPPC131LFBN-RC/S7046-ND/810185" H 13050 7450 50  0001 C CNN "Digikey_Page"
+F 6 "PPPC131LFBN-RC" H 13050 7450 50  0001 C CNN "Manufacturer_PN"
+	1    13050 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 6850 10550 7050
+Wire Wire Line
+	10550 7050 10700 7050
+Wire Bus Line
+	10400 7800 10350 7800
+Text GLabel 10350 7800 0    50   Input ~ 0
+A[15:0]
+Wire Wire Line
+	10500 7150 10700 7150
+Entry Wire Line
+	10500 7150 10400 7050
+Text Label 10500 7150 0    50   ~ 0
+A0
+Entry Wire Line
+	10500 7250 10400 7150
+Entry Wire Line
+	10500 7350 10400 7250
+Entry Wire Line
+	10500 7450 10400 7350
+Entry Wire Line
+	10500 7550 10400 7450
+Entry Wire Line
+	10500 7650 10400 7550
+Entry Wire Line
+	10500 7750 10400 7650
+Text Label 10500 7250 0    50   ~ 0
+A1
+Wire Wire Line
+	10500 7750 10700 7750
+Wire Wire Line
+	10500 7650 10700 7650
+Wire Wire Line
+	10500 7550 10700 7550
+Wire Wire Line
+	10500 7450 10700 7450
+Wire Wire Line
+	10500 7350 10700 7350
+Wire Wire Line
+	10500 7250 10700 7250
+Text Label 10500 7350 0    50   ~ 0
+A2
+Text Label 10500 7450 0    50   ~ 0
+A3
+Text Label 10500 7550 0    50   ~ 0
+A4
+Text Label 10500 7650 0    50   ~ 0
+A5
+Text Label 10500 7750 0    50   ~ 0
+A6
+Wire Wire Line
+	12650 7750 12850 7750
+Text GLabel 12650 7850 0    50   Input ~ 0
+~RD
+$Comp
+L power:+5V #PWR0130
+U 1 1 60FAD945
+P 10550 6850
+F 0 "#PWR0130" H 10550 6700 50  0001 C CNN
+F 1 "+5V" H 10565 7023 50  0000 C CNN
+F 2 "" H 10550 6850 50  0001 C CNN
+F 3 "" H 10550 6850 50  0001 C CNN
+	1    10550 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 60F86014
+P 10650 8200
+F 0 "#PWR0129" H 10650 7950 50  0001 C CNN
+F 1 "GND" H 10655 8027 50  0000 C CNN
+F 2 "" H 10650 8200 50  0001 C CNN
+F 3 "" H 10650 8200 50  0001 C CNN
+	1    10650 8200
+	1    0    0    -1  
+$EndComp
+Text Label 12650 6950 0    50   ~ 0
+A15
+Entry Wire Line
+	12550 7550 12650 7650
+Wire Wire Line
+	12850 7650 12650 7650
+Entry Wire Line
+	12650 7550 12550 7450
+Entry Wire Line
+	12650 7450 12550 7350
+Entry Wire Line
+	12650 7350 12550 7250
+Entry Wire Line
+	12650 7250 12550 7150
+Entry Wire Line
+	12650 7150 12550 7050
+Entry Wire Line
+	12650 7050 12550 6950
+Entry Wire Line
+	12650 6950 12550 6850
+Text Label 12650 7050 0    50   ~ 0
+A14
+Text Label 12650 7150 0    50   ~ 0
+A13
+Text Label 12650 7250 0    50   ~ 0
+A12
+Text Label 12650 7350 0    50   ~ 0
+A11
+Text Label 12650 7450 0    50   ~ 0
+A10
+Text Label 12650 7550 0    50   ~ 0
+A9
+Text Label 12650 7650 0    50   ~ 0
+A8
+Wire Wire Line
+	12650 7550 12850 7550
+Wire Wire Line
+	12650 7450 12850 7450
+Wire Wire Line
+	12650 7350 12850 7350
+Wire Wire Line
+	12650 7250 12850 7250
+Wire Wire Line
+	12650 7150 12850 7150
+Wire Wire Line
+	12650 7050 12850 7050
+Wire Wire Line
+	12650 6950 12850 6950
+Text Label 10500 7850 0    50   ~ 0
+A7
+Wire Wire Line
+	10500 7850 10700 7850
+Entry Wire Line
+	10500 7850 10400 7750
+Text GLabel 14900 7950 0    50   Input ~ 0
+D[7:0]
+Wire Bus Line
+	14950 7950 14900 7950
+Text Label 15250 7300 0    50   ~ 0
+D0
+Text Label 15250 7400 0    50   ~ 0
+D1
+Text Label 15250 7500 0    50   ~ 0
+D2
+Text Label 15250 7600 0    50   ~ 0
+D3
+Text Label 15250 7700 0    50   ~ 0
+D4
+Text Label 15250 7800 0    50   ~ 0
+D5
+Text Label 15250 7900 0    50   ~ 0
+D6
+Text Label 15250 8000 0    50   ~ 0
+D7
+Entry Wire Line
+	14950 7900 15050 8000
+Entry Wire Line
+	14950 7800 15050 7900
+Entry Wire Line
+	14950 7700 15050 7800
+Entry Wire Line
+	14950 7600 15050 7700
+Entry Wire Line
+	14950 7500 15050 7600
+Entry Wire Line
+	14950 7400 15050 7500
+Entry Wire Line
+	14950 7300 15050 7400
+Entry Wire Line
+	14950 7200 15050 7300
+Text Label 15250 7000 0    50   ~ 0
+A0
+Text GLabel 14900 6850 0    50   Input ~ 0
+A[15:0]
+Wire Bus Line
+	14950 6850 14900 6850
+Wire Bus Line
+	14950 6900 14950 6850
+Entry Wire Line
+	14950 6900 15050 7000
+$Comp
+L Connector_Generic:Conn_01x16 J5
+U 1 1 611DB170
+P 15550 7400
+F 0 "J5" H 15630 7392 50  0000 L CNN
+F 1 "LCD" H 15630 7301 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical" H 15550 7400 50  0001 C CNN
+F 3 "~" H 15550 7400 50  0001 C CNN
+F 4 "S7049-ND" H 15550 7400 50  0001 C CNN "Digikey_PN"
+F 5 "https://www.digikey.com/en/products/detail/PPPC161LFBN-RC/S7049-ND/810188" H 15550 7400 50  0001 C CNN "Digikey_Page"
+F 6 "PPPC161LFBN-RC" H 15550 7400 50  0001 C CNN "Manufacturer_PN"
+	1    15550 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15350 6700 15200 6700
+Wire Wire Line
+	15200 6700 15200 8250
+Wire Wire Line
+	15350 8100 15150 8100
+Wire Wire Line
+	15150 8100 15150 6800
+Text GLabel 14900 7100 0    50   Input ~ 0
+~WR
+$Comp
+L power:GND #PWR0118
+U 1 1 6120381D
+P 15200 8250
+F 0 "#PWR0118" H 15200 8000 50  0001 C CNN
+F 1 "GND" H 15205 8077 50  0000 C CNN
+F 2 "" H 15200 8250 50  0001 C CNN
+F 3 "" H 15200 8250 50  0001 C CNN
+	1    15200 8250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0124
+U 1 1 608F3DE1
+P 12100 9250
+F 0 "#PWR0124" H 12100 9000 50  0001 C CNN
+F 1 "GND" H 12105 9077 50  0000 C CNN
+F 2 "" H 12100 9250 50  0001 C CNN
+F 3 "" H 12100 9250 50  0001 C CNN
+	1    12100 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 608C2CE4
+P 12550 9150
+F 0 "H4" H 12650 9153 50  0000 L CNN
+F 1 "MountingHole_Pad" H 12650 9108 50  0001 L CNN
+F 2 "P80C550-EVN:MountingHole_3.5mm_Pad_LCD" H 12550 9150 50  0001 C CNN
+F 3 "~" H 12550 9150 50  0001 C CNN
+	1    12550 9150
+	1    0    0    -1  
+$EndComp
+Connection ~ 12250 9250
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 608C2CDE
+P 12250 9150
+F 0 "H3" H 12350 9153 50  0000 L CNN
+F 1 "MountingHole_Pad" H 12350 9108 50  0001 L CNN
+F 2 "P80C550-EVN:MountingHole_3.5mm_Pad_LCD" H 12250 9150 50  0001 C CNN
+F 3 "~" H 12250 9150 50  0001 C CNN
+	1    12250 9150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11950 9250 12100 9250
+Wire Wire Line
+	11650 9250 11950 9250
+Connection ~ 11950 9250
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 608A89D4
+P 11950 9150
+F 0 "H2" H 12050 9153 50  0000 L CNN
+F 1 "MountingHole_Pad" H 12050 9108 50  0001 L CNN
+F 2 "P80C550-EVN:MountingHole_3.5mm_Pad_LCD" H 11950 9150 50  0001 C CNN
+F 3 "~" H 11950 9150 50  0001 C CNN
+	1    11950 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 608A5D32
+P 11650 9150
+F 0 "H1" H 11750 9153 50  0000 L CNN
+F 1 "MountingHole_Pad" H 11750 9108 50  0001 L CNN
+F 2 "P80C550-EVN:MountingHole_3.5mm_Pad_LCD" H 11650 9150 50  0001 C CNN
+F 3 "~" H 11650 9150 50  0001 C CNN
+	1    11650 9150
+	1    0    0    -1  
+$EndComp
+Connection ~ 12100 9250
+Wire Wire Line
+	12100 9250 12250 9250
+Wire Wire Line
+	12250 9250 12550 9250
+NoConn ~ 15350 6900
+NoConn ~ 15350 7200
+NoConn ~ 15350 8200
+Wire Wire Line
+	10350 7950 10700 7950
+Wire Wire Line
+	10350 8050 10700 8050
+Wire Wire Line
+	10350 8150 10700 8150
+Wire Wire Line
+	10650 6950 10650 8200
+Wire Wire Line
+	10650 6950 10700 6950
+Wire Wire Line
+	8050 7750 8150 7750
+Wire Wire Line
+	8050 7250 8050 7750
+Wire Wire Line
+	12800 7950 12850 7950
+Wire Wire Line
+	12800 6850 12800 7950
+Connection ~ 15150 6800
+Wire Wire Line
+	15150 6600 15150 6800
+$Comp
+L power:+5V #PWR0119
+U 1 1 61216B00
+P 15150 6600
+F 0 "#PWR0119" H 15150 6450 50  0001 C CNN
+F 1 "+5V" H 15165 6773 50  0000 C CNN
+F 2 "" H 15150 6600 50  0001 C CNN
+F 3 "" H 15150 6600 50  0001 C CNN
+	1    15150 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15350 6800 15150 6800
+Wire Wire Line
+	15350 7000 15050 7000
+Wire Wire Line
+	14900 7100 15350 7100
+Wire Wire Line
+	15050 7400 15350 7400
+Wire Wire Line
+	15050 7300 15350 7300
+Wire Wire Line
+	15050 7500 15350 7500
+Wire Wire Line
+	15350 7600 15050 7600
+Wire Wire Line
+	15050 7700 15350 7700
+Wire Wire Line
+	15350 7800 15050 7800
+Wire Wire Line
+	15050 7900 15350 7900
+Wire Wire Line
+	15350 8000 15050 8000
+Wire Bus Line
+	14950 7200 14950 7950
+Wire Bus Line
+	12550 6850 12550 7600
+Wire Bus Line
+	10400 7050 10400 7800
+$EndSCHEMATC
